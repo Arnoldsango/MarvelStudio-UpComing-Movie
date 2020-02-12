@@ -1,0 +1,113 @@
+﻿@model Summer_School_Jan20.Models.Movie
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Book Movie (This is currrently desabled)</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Surname, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Surname, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Surname, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CellNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CellNumber, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CellNumber, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.date, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.date, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.date, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.NumberOfSeat, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NumberOfSeat, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.NumberOfSeat, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.numOfParking, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.numOfParking, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.numOfParking, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-10">
+                <p> Screan Type</p>
+                <p>@Html.RadioButtonFor(x => x.CreanType, "2D") &nbsp; 2D  &nbsp;   R70.00</p>
+                <p>@Html.RadioButtonFor(x => x.CreanType, "3D") &nbsp; 3D   &nbsp;  R100.00</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-10">
+
+                <p>Timing</p>
+                <p> @Html.RadioButtonFor(x => x.Time, "10:30") &nbsp; 10:30  &nbsp;&nbsp; @Html.RadioButtonFor(x => x.Time, "12:30") &nbsp; 12:30</p>
+
+                <p>@Html.RadioButtonFor(x => x.Time, "14:30") &nbsp; 14:30  &nbsp;&nbsp; @Html.RadioButtonFor(x => x.Time, "16:30") &nbsp; 16:30</p>
+
+                <p>@Html.RadioButtonFor(x => x.Time, "18:30") &nbsp; 18:30  &nbsp;&nbsp; @Html.RadioButtonFor(x => x.Time, "20:30") &nbsp; 20:30</p>
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10 ">
+                <input type="submit" value="Create" class="btn btn-default " width="100%" />
+            </div>
+        </div>
+    </div>
+}
+
+THIS IS NOT OPERATIONAL CURRENTLY  ACTIVE!
+
+@*<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>*@
+
+
